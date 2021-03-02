@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+<h1> <%= title %> </h1>
+
+<% content.forEach((value) => {  %>
+
+
+  <h2> <%= value.title %></h2>  <%/* Header will be title  */%>
+  <p>  <%= value.body.substring(0,100) + "..." %>   <%/* Display only 100 characters */%>
+  <a href='/posts/<%=value.title%>'> Read More </a>   <%/* When clicked read more, render the fullsite  */%>
+ </p>
+<% })  %>
+
+<%- include('partials/footer') -%>
